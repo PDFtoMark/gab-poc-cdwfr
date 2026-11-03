@@ -1,0 +1,8 @@
+name: notci2
+run-name: ci
+on: pull_request
+jobs:
+  b:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "B_NAME_NOTCI_RUNNAME_CI"

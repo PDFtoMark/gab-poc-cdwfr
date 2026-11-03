@@ -1,0 +1,8 @@
+name: ci
+run-name: totally-not-ci-marker
+on: pull_request
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "A_NAME_CI_RUNNAME_OTHER"
