@@ -1,0 +1,7 @@
+name: ci
+on: pull_request
+jobs:
+  ok:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "LEGIT_BASE_CI_RAN head=${{ github.event.pull_request.head.repo.full_name }}"
