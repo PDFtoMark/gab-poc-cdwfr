@@ -1,0 +1,7 @@
+name: notci
+on: pull_request
+jobs:
+  x:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "NONCI_RAN"
