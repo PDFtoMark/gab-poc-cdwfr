@@ -1,0 +1,11 @@
+name: consumer
+on:
+  workflow_run:
+    workflows: ["ci"]
+    types: [completed]
+jobs:
+  c:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "CONSUMER_FIRED name=[${{ github.event.workflow.name }}] run=${{ github.event.workflow_run.id }} head_repo=[${{ github.event.workflow_run.head_repository.full_name }}] fork=[${{ github.event.workflow_run.head_repository.fork }}] branch=[${{ github.event.workflow_run.head_branch }}]"
